@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Doan So</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    .btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+</style>
+
+<body>
+    <div class="btn">
+        <button onclick="playGuess()">Play</button>
+    </div>
+
+    <script>
+        let playGuess = () => {
+            let min = parseInt(prompt("Nhap so nho nhat trong khoang: "));
+            let max = parseInt(prompt("Nhap so lon nhat trong khoang: "));
+
+            if(isNaN(min) || isNaN(max) || min > max){
+                alert("Vui long nhap so hop le !!!");
+            }
+
+            const randomNumber = Math.floor(Math.random() * (max-min+1) + min);
+            for(let soLan = 3; soLan >= 1 ; soLan--){
+                let guess = parseInt(prompt("Chon so: "));
+
+                if(isNaN(guess)){
+                    alert("Vui long nhap so hop le !!!!");
+                    continue;
+                }
+
+                if(guess === randomNumber){
+                    alert(`Ban da nhap chinh xac so: ${randomNumber}`);
+                    return;
+                } else if(guess > randomNumber){
+                    alert(`So ban nhap lon hon !!!`);
+                } else if(guess < randomNumber){
+                    alert(`So ban nhap nho hon !!!`);
+                }
+            }
+            alert(`Ban da het luot doan, so dung la: ${randomNumber}`);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ListBT</title>
+</head>
+<body>
+    <script>
+        // Tính tích cac so tu a den b.
+        let SOA = parseInt(prompt("Nhap so a: "));
+        let SOB = parseInt(prompt("Nhap so b: "));
+        let tich = 1;
+        for (let i = SOA; i <= SOB; i++) {
+            tich = tich * i;
+        }
+        console.log(tich);
+
+        // Tính Tổng các số chia 5 dư 2 từ a đến b.
+        let soa = parseInt(prompt("Nhap a: "));
+        let sob = parseInt(prompt("Nhap b: "));
+        let tong = 0;
+
+        for (let i = soa; i <= sosob; i++) {
+            if (i % 5 == 2) {
+                tong = tong + i;
+            }
+        }
+        console.log(tong);
+
+        // Đếm các số chia 5 dư 2 từ a đến b
+        let Soa = parseInt(prompt("Nhap a: "));
+        let Sob = parseInt(prompt("Nhap b: "));
+        let soDem;
+
+        for (let i = Soa; i <= SoSob; i++) {
+            if (i % 5 == 2) {
+                console.log(i);
+                soDem++;
+            }
+        }
+        console.log(soDem);
+
+        // In ra màn hình 0, 5 ,10,15, 20, ... 50.
+        for (let i = 0; i <= 50; i = i + 5) {
+            document.writeln(i + " ");
+        }
+
+        // In ra  màn hình 10, 9, 8, 7, 6, ... 0.
+        for (let i = 10; i >= 0; i--) {
+            console.log(i);
+        }
+
+        // In ra màn hình 50, 45, 40, .. 0 
+        for (let i = 50; i >= 0; i = i - 5) {
+            console.log(i);
+        }
+
+        // In ra bảng cửu chương 5.
+        let n = parseInt(prompt("Nhap so can tinh bang co chuong: "));
+        for (let i = 0; i <= 10; i++) {
+            document.writeln(`${n} x ${i} = ${n * i}`);
+        }
+
+    </script>
+</body>
+</html>

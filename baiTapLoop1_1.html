@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //bai1. Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành.
+        for(let i=1; i<=100; i++){
+            console.log(i);
+            if(i==99){
+                alert("Completed!");
+                break;
+            }
+        }
+
+        //bai2. 
+        let temp
+        let mess ="";
+
+        for(let i=1; i<=5; i++){
+            temp = parseFloat(prompt("Nhap nhiet do hien tai: "));
+            
+            if(isNaN(temp)){
+                alert("Vui long nhap so hop le !!!");
+                continue;
+            }
+
+            if (temp > 100){
+                alert("Nhiet do qua cao, vui long giam nhiet do !");
+            } else if(temp < 20){
+                alert("Nhiet do qua thap, vui long tang nhiet do");
+            } else {
+                mess = "Nhiet do thich hop";
+                break;
+            }
+        }
+
+        if(mess==""){
+            alert("Ban da nhap sai hon 5 lan !!");
+        }
+        
+    </script>
+</body>
+</html>
